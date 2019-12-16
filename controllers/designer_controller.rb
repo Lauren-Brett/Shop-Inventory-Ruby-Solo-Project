@@ -13,7 +13,6 @@ get '/designers' do
 end
 
 get 'designers/new' do
-  @designer = Designer.all
   erb(:'designers/new')
 end
 

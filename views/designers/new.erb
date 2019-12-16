@@ -1,18 +1,15 @@
 <p>Add new designer</p>
-<form action="/designers/" method="POST">
+<form action="/designers" method="POST">
 
   <label for="name">Name:</label>
   <input type="text" name="name" id="name"/>
 
-  <label for="designer">Select Designer:</label>
-  <select name="designer" id="designer">
-    <% @designer.each do |designer| %>
-    <option value=<%= designer.id %>><%= designer.name %></option>
-    <% end %>
+  <label for="location">Location:</label>
+  <select id="location" name="location">
+    <option value="England">England</option>
+    <option value="Wales">Wales</option>
   </select>
 
-  <label for="location">Location:</label>
-  <input type="text" name="location" id="location">
 
 
 <input type="submit" value="Add Designer">
