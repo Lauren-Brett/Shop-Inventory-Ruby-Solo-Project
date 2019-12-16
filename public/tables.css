@@ -1,0 +1,18 @@
+table {
+  background-color: white;
+
+}
+
+th {
+  background-color: palegreen ;
+}
+
+.product-table-one {
+  display: flex;
+
+}
+
+
+.product-table-one .total {
+  text-weight: bold;
+}

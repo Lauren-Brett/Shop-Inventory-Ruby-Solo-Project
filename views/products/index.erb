@@ -2,51 +2,59 @@
 <hr>
 <h3>Current Products:</h3>
 
-<div class="product-table">
+<div class="product-table-one">
+
+  <% for product in @products %>
 
 <table>
   <tr>
-    <th>Product Type</th>
-    <td>|</td>
-    <th>Description</th>
-    <td>|</td>
-    <th>Stock</th>
-    <td>|</td>
-    <th>Cost</th>
-    <td>|</td>
-    <th>Sell Price</th>
-    <td>|</td>
-    <th>Markup</th>
-    <td>|</td>
-    <th>Designer</th>
+    <th>Products</th>
+    <th></th>
   </tr>
-    <% for product in @products %>
-
-<tr>
-  <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
-    <td>|</td>
-    <td><%= product.description %></td>
-    <td>|</td>
-    <td><%= product.stock_quantity%></td>
-    <td>|</td>
-    <td>$<%= product.buy_price%></td>
-    <td>|</td>
-    <td>$<%= product.sell_price%></td>
-    <td>|</td>
-    <td>$<%= product.markup%></td>
-    <td>|</td>
+  <br>
+  <tr>
+    <td>Company</td>
+    <td>:</td>
     <td><%= product.designer.name%></td>
   </tr>
-<% end %>
 
+    <tr>
+      <td>Description</td>
+      <td>:</td>
+      <td><%= product.description %></td>
+    </tr>
+    <tr>
+      <td>Current Stock</td>
+      <td>:</td>
+      <td><%= product.stock_quantity %></td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>:</td>
+      <td>£<%= product.buy_price %></td>
+    </tr>
+    <tr>
+      <td>Sell Price</td>
+      <td>:</td>
+      <td>£<%= product.sell_price %></td>
+    </tr>
+      <div class="total">
+    <tr>
+      <td>Markup></td>
+      <td>:</td>
+      <td>£<%= product.markup %></td>
+    </tr>
+      </div>
+  <% end %>
 </table>
 </div>
 <br>
+
 <br>
 <br>
 <br>
+<br>
+
 <div>
-
-
   <a href='/'>Back to welcome</a>
 </div>
