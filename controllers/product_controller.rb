@@ -6,7 +6,12 @@ require_relative('../models/product.rb')
 also_reload('../models/*')
 
 
-# get '/designers/:id_designers' do
-#   @products = Product.all(params['id_designers'].to_i)
-#   erb(:'product/index')
-# end
+get '/products/:id_designer' do
+  @products = Product.all(params['id_designers'].to_i)
+  erb(:'products/index')
+end
+
+get '/products/:id' do
+  @products = Product.find(params[:id].to_i)
+  erb(:'products/show')
+end

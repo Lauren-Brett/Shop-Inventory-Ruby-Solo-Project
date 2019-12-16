@@ -1,0 +1,15 @@
+<p>Products:</p>
+
+<h3><%= @products.name%></h3>
+
+<h3>Current Products:</h3>
+
+<% for product in @products %>
+  <ul>
+  <li style="list-style-type: none">
+  <a href="/designers/show/<%= product.name %>">
+    <%= product.name %></a>
+    <%= product.description %>
+  </li>
+  </ul>
+<% end %>

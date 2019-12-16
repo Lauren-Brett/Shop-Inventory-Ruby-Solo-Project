@@ -9,10 +9,10 @@ get '/' do
   erb(:index)
 end
 
-get '/designers' do
-  @designers = Designer.all
-  erb(:'/designers/index')
-end
+# get '/designers' do
+#   @designers = Designer.all
+#   erb(:'/designers/index')
+# end
 
 # get '/designers/new' do
 #     erb(:new)
