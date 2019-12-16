@@ -7,7 +7,7 @@
   <h2>$<%=@product.buy_price%></h2>
 
 
-
+<a href="/products/<%= @product.id %>/edit">Edit</a>
 
 <form action="/products/<%= @product.id %>/delete" method="POST">
   <br>
