@@ -15,3 +15,5 @@ get '/products/:id' do
   @product = Product.find(params[:id].to_i)
   erb(:'products/show')
 end
+
+#finish restful set up 

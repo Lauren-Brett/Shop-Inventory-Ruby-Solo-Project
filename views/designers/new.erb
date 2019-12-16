@@ -1,17 +1,10 @@
 <p>Add new designer</p>
 <form action="/designers" method="POST">
 
-<% for designer in @designers %>
-  <label for="name">Name:</label>
+  <label for="name">Company Name:</label>
   <input type="text" name="name" id="name"/>
 
-  <label for="location">Location:</label>
-  <select id="location" name="location">
-    <option value="England">England</option>
-    <option value="Wales">Wales</option>
-  </select>
-
-
-
-<input type="submit" value="Add Designer">
+  <label for="description">Description:</label>
+  <input type="text" name="description" id="description">
+  
 </form>
