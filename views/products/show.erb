@@ -1,11 +1,13 @@
 <h1>products are here </h1>
 
 
-<h3><%= @product.name%></h3>
-<p><%= @product.description%></p>
+  <h3><%= @product.name%></h3>
+  <h2><%= @product.description%></h2>
+  <h2><%= @product.stock_quantity%></h2>
+  <h2>$<%=@product.buy_price%></h2>
 
 
-<a href="/products/<%= @product.id %>/edit">Edit</a>
+
 
 <form action="/products/<%= @product.id %>/delete" method="POST">
   <br>
