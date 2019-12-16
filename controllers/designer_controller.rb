@@ -9,7 +9,7 @@ also_reload('../models/*')
 
 get '/designers' do
   @designers = Designer.all
-  erb(:'designers/index')
+  erb(:'designer/index')
 end
 
 get 'designers/new' do

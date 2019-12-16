@@ -11,7 +11,7 @@ require_relative('controllers/designer_controller')
 
 get '/designers' do
   @designers = Designer.all
-  erb(:index)
+  erb(:'/designer/index')
 end
 
 # get '/designers/new' do
