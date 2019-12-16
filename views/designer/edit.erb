@@ -1,0 +1,11 @@
+
+<form method="post" action="/designers/id <%= @designer.id %>">
+  <label for="name">Company Name:</label>
+  <input type="text" name="name" id="name" value="<%= @designer.name %>"/>
+
+
+  <label for="location">Location:</label>
+  <input type="text" name="location" value="<%= @designer.location%>"/>
+
+  <input type="submit" value="Edit Designer"/>
+</form>

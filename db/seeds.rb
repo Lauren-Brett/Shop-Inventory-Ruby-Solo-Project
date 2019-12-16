@@ -1,6 +1,6 @@
 require_relative( "../models/designer.rb")
 require_relative( "../models/product.rb")
-require_relative( "../models/designer_product")
+
 require("pry")
 
 Product.delete_all()

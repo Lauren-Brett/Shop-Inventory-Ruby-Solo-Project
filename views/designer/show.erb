@@ -1,0 +1,20 @@
+<h3><%= @designer.name%></h3>
+<p><%= @designer.location%></p>
+
+
+<a href="/designers/<%= @designer.id %>/edit">Edit</a>
+
+<form action="/designers/<%= @designer.id %>/delete" method="POST">
+  <br>
+  <input type="submit" value="Delete">
+</form>
+
+<p>List of products</p>
+
+<br>
+<br>
+
+
+<div>
+  <a href='/designers'> Back to listings</a>
+</div>
