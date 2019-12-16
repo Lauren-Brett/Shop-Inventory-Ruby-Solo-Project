@@ -1,16 +1,24 @@
-<h1>Your shops listings</h1>
+<h1>Shop listings</h1>
 <hr>
 <h3>Current Designers:</h3>
 
-<% for designer in @designers %>
-  <ul>
-  <li style="list-style-type: none">
-  <a href="/designers/<%= designer.id %>">
-    <%= designer.name %></a>
-    <%= designer.location %>
-  </li>
-  </ul>
+
+<table>
+<tr>
+  <th>Company Name</th>
+  <th></th>
+  <th>Company Location</th>
+</tr>
+  <% for designer in @designers %>
+  <tr>
+    <td><a href="/designers/<%= designer.id %>"><%= designer.name %></a></td>
+    <td>|</td>
+    <td><%= designer.location %></td>
+  </tr>
 <% end %>
+</table>
+
+<hr>
 
 <div>
   <a href='/'>Back to welcome</a>
