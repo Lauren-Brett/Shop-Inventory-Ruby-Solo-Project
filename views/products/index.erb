@@ -1,5 +1,10 @@
 <h1>Shop listings by PRODUCT</h1>
 <hr>
+
+<div class="create-product">
+  <a href="/products/new">Create new product</a>
+</div>
+
 <h3>Current Products:</h3>
 
 <div class="product-table-one">
@@ -53,6 +58,17 @@
 <br>
 <br>
 <br>
+
+
+
+
+
+<% for product in @products %>
+<form action="/products/<%= product.id %>/delete" method="POST">
+  <br>
+  <input type="submit" value="Delete Product shows id">
+</form>
+<% end %>
 
 <div>
   <a href='/'>Back to welcome</a>

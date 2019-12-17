@@ -1,5 +1,5 @@
 
-<form method="post" action="/designers <%= @designer.id %>">
+<form method="post" action="/designers/<%= @designer.id %>">
   <label for="name">Company Name:</label>
   <input type="text" name="name" id="name" value="<%= @designer.name %>"/>
 
@@ -9,3 +9,9 @@
 
   <input type="submit" value="Edit Designer"/>
 </form>
+
+<br>
+<br>
+<div class="back-home">
+  <a href='/'>Back to welcome</a>
+</div>

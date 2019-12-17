@@ -73,6 +73,14 @@ def update()
   SqlRunner.run(sql, values)
 end
 
+def self.destroy(id)
+  sql = "DELETE FROM designers
+    WHERE id = $1"
+  values = [id]
+  SqlRunner.run(sql, values)
+end
+
+
 #
 # def number_of_products()
 #   sql = "SELECT products.* FROM products
