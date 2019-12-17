@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('controllers/product_controller')
-require_relative('controllers/designer_controller')
+require_relative('controllers/products_controller')
+require_relative('controllers/designers_controller')
 
 
 

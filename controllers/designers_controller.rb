@@ -14,7 +14,6 @@ end
 
 #new, create, get back
 get '/designers/new' do
-  
   erb(:'designers/new')
 end
 
@@ -28,17 +27,8 @@ end
 get '/designers/:id' do
   @designer = Designer.find(params['id'].to_i)
   @products = @designer.find_product()
-  # @designer = Designer.find_product(params['designer_id'].to_i)
   erb(:'designers/show')
 end
-
-#create
-# post '/designers/:id/create' do
-#   @designer = Designer.new(params)
-#   @designer.save()
-#   erb(:'designers/create')
-# end
-
 
 #edit
 get '/designers/:id/edit' do
@@ -46,31 +36,14 @@ get '/designers/:id/edit' do
   erb(:'designers/edit')
 end
 
-
-
-
 #delete
 post '/designers/:id/delete' do
-
   Designer.destroy(params[:id])
   redirect to('/designers')
 end
-
-
 
 #update
 post '/designers/:id' do
   Designer.new(params).update
   redirect to('/designers')
 end
-
-
-
-
-# get '/designers/:id/products' do
-#   @products = Product.find(params['designer_id'])
-#   erb(:'designers/show')
-# end
-
-
-# display a designer with all of their products

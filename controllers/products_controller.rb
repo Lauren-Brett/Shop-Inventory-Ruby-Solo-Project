@@ -12,13 +12,6 @@ get '/products' do
   erb(:'products/index')
 end
 
-#new
-# #fixxx
-# get '/products/new' do
-#     erb(:'products/new')
-# end
-#
-
 #new, create, get back
 get '/products/new' do
   @products = Product.all
@@ -32,15 +25,11 @@ post '/products' do
   redirect to '/products'
 end
 
-
 #show
 get '/products/:id' do
   @product = Product.find(params[:id].to_i)
   erb(:'products/show')
 end
-
-#create
-
 
 
 #edit
