@@ -11,7 +11,12 @@
 
   <% for product in @products %>
 
-<table>
+<table
+  style="width: 100%;
+  display: flex;
+  justify-content: center;">
+  <tbody>
+
   <tr>
     <th>Products</th>
     <th></th>
@@ -43,14 +48,15 @@
       <td>:</td>
       <td>£<%= product.sell_price %></td>
     </tr>
-      <div class="total">
-    <tr>
-      <td>Markup></td>
-      <td>:</td>
-      <td>£<%= product.markup %></td>
-    </tr>
-      </div>
+    <div class="total">
+      <tr>
+        <td><strong>Markup</strong></td>
+        <td>:</td>
+        <td><strong>£<%= product.markup %></strong></td>
+      </tr>
+    </div>
   <% end %>
+  </tbody>
 </table>
 </div>
 <br>
@@ -73,7 +79,7 @@
 
 <br>
 <br>
-<div class="back-button">
+<div class="back-home">
   <a href='/designers'>Designers</a>
 </div>
 <br>
