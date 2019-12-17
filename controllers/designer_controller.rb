@@ -25,7 +25,8 @@ end
 
 #show
 get '/designers/:id' do
-  @designer = Designer.find(params[:id].to_i)
+  @designer = Designer.find(params['id'].to_i)
+  @products = @designer.find_product()
   # @designer = Designer.find_product(params['designer_id'].to_i)
   erb(:'designers/show')
 end

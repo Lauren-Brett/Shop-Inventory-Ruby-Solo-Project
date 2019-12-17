@@ -1,23 +1,35 @@
-<h3><%= @designer.name%></h3>
-<p>Location: <%= @designer.location%></p>
 
 
-<!-- designers/id/products -->
+<h3><%= @designer.name.capitalize%></h3>
+  <strong>Location:</strong>
+  <h5><italic><%= @designer.location%></italic></h5>
+
+
+
+
 <a href="/designers/<%= @designer.id %>/edit">Edit Designer Info</a>
+
+<p>all products</p>
+<ul>
+  <% @products.each do |product|%>
+  <li>
+    <%= product.name %>
+  </li>
+  <% end %>
+</ul>
+
 
 <form action="/designers/<%= @designer.id %>/delete" method="POST">
   <br>
   <input type="submit" value="Delete Designer">
 </form>
 
-
-
 <br>
 <br>
 <br>
 <br>
 <div>
-  <a  class="back-home" href='/designers'> Back to listings</a>
+  <a class="back-home" href='/designers'> Back to listings</a>
 </div>
 <br>
 <br>

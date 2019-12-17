@@ -106,7 +106,7 @@ end
 def find_product()
   sql = "SELECT * FROM products
     WHERE designer_id = $1"
-  values = [@designer_id]
+  values = [@id]
   result = SqlRunner.run(sql, values)
   return result.map { |item| Product.new(item)}
 end

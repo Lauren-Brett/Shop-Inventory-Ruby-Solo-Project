@@ -7,6 +7,7 @@ body {
   text-align: center;
   color: white;
   display: block;
+
 }
 
 .nav {
@@ -20,14 +21,16 @@ body {
 
 
 .image {
-
   background-position: center;
   height: 300px;
+  z-index: 0;
 }
 
 h3 {
   text-align: center;
   font-weight: bold;
+  font-family: monospace;
+  font-size: 3em;
 }
 
 .welcome p {
