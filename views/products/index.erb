@@ -69,17 +69,12 @@
 
 
 
-
-
-
 <% for product in @products %>
 <form action="/products/<%= product.id %>/delete" method="POST">
   <br>
   <input type="submit" value="Delete Product shows id">
 </form>
 <% end %>
-
-
 
 
 
@@ -91,16 +86,3 @@
       <%= product.markup %>
       <% end %>">
 </form>
-
-<br>
-<br>
-<div class="centre-back">
-    <a class="back-home" href='/designers'>Designers</a>
-
-  <br>
-  <br>
-
-  <div>
-    <a  class="back-home" href='/'>Home</a>
-  </div>
-</div>

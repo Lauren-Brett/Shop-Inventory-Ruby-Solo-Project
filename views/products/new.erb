@@ -17,30 +17,47 @@
   <label for="sell-cost">Sell Price:</label>
   <input type="text" name="sell_price" id="sell-cost">
 
-      <form class="markup-return" action="/products/new" method="post">
-
-        <p>Calculate markup:</p>
-
-          <input type="submit"  value="<% for product in @products %>
-            <%= product.markup %>
-            <% end %>">
-      </form>
-
+<p>Select Designer:</p>
+<select name="designer_id">
+  <% for designer in @designers %>
+  <option value="<%= designer.id %>"><%= designer.name %>
+  </option>
+  <% end %>
+</select>
+<br>
 <br>
   <input type="submit"  value="Add Product">
 
-
-
 </form>
 
-<br>
-<br>
-<div>
-  <a  class="back-home" href='/products'>Products</a>
-</div>
-<br>
-<br>
-<br>
-<div>
-  <a class="back-home" href='/'>Home</a>
-</div>
+
+
+
+
+
+<form class="markup-return" action="/products/new" method="post">
+  <p>Calculate markup:</p>
+
+
+  <% for product.buy_price in @products %>
+  <% for product.sell_price in @products %>
+
+  <%= product.markup %>
+
+  
+  take $1=buy_price and $2=sell_price
+  call
+
+  <input type="submit"  value="<% for product in @products %>
+    <%= product.markup %>
+    <% end %>">
+
+
+
+
+
+
+    <input type="submit"  value="<% for product in @products %>
+      <%= product.markup %>
+      <% end %>">
+</form>

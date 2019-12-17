@@ -12,7 +12,6 @@ get '/products' do
   erb(:'products/index')
 end
 
-
 #new
 # #fixxx
 # get '/products/new' do
@@ -23,6 +22,7 @@ end
 #new, create, get back
 get '/products/new' do
   @products = Product.all
+  @designers = Designer.all
   erb(:'products/new')
 end
 
@@ -31,8 +31,6 @@ post '/products' do
   @product.save()
   redirect to '/products'
 end
-
-
 
 
 #show
@@ -45,17 +43,18 @@ end
 
 
 
-
-
-
-
-
 #edit
+get '/products/:id/edit' do
+  @products = Product.find(params['id'])
+  erb(:'products/edit')
+end
 
 
-
-#update
-
+#update, placement?
+post '/products/:id' do
+  Product.new(params).update
+  redirect to('/products')
+end
 
 
 #delete

@@ -13,17 +13,14 @@ body {
   text-align: center;
 }
 
-
-
 .nav p {
   color: grey;
   font-size: 1em;
 }
 
-
 .image {
   display: inline-block;
-  
+
   height: 200px;
   z-index: 0;
 
@@ -47,19 +44,26 @@ h3 {
 .back-home {
 
   text-align: center;
-  border:2px dotted;
-  color:
-
+  /* color: */
+  display: block;
   /* border-radius: 3%; */
   /* padding: 8px 12px; */
   cursor: pointer;
   font-family: monospace, serif;
-  /* margin: auto; */
+  margin: 20px 20px;
   /* padding: 0; */
-  position:
+  /* position: */
+}
+
+.back-home span {
+  display: inline-block;
+  border:2px dotted;
+  
 }
 
 .centre-back {
+  text-align: center;
+
   color: green;
 }
 
