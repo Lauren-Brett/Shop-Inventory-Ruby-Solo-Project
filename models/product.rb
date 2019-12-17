@@ -106,31 +106,10 @@ def total_stock_amount
   return @buy_price * @stock_quantity
 end
 
-
-
-# def add stock
-#
-
-
-# def low_stock()
-#
-#   if @stock_quantity < 2
-#     return "low stock"
-#   end
-# end
-
-
-#def designer_for_this_product end
-
-#def stock_quantity end
-
-#def buy_price to sell_price differnence e
-
-
-
-#fix this !!!!!
-
-
+def potential_profit()
+   profit = markup() * @stock_quantity
+   return profit
+end
 
 
 end

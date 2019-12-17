@@ -27,37 +27,4 @@
 <br>
 <br>
   <input type="submit"  value="Add Product">
-
-</form>
-
-
-
-
-
-
-<form class="markup-return" action="/products/new" method="post">
-  <p>Calculate markup:</p>
-
-
-  <% for product.buy_price in @products %>
-  <% for product.sell_price in @products %>
-
-  <%= product.markup %>
-
-  
-  take $1=buy_price and $2=sell_price
-  call
-
-  <input type="submit"  value="<% for product in @products %>
-    <%= product.markup %>
-    <% end %>">
-
-
-
-
-
-
-    <input type="submit"  value="<% for product in @products %>
-      <%= product.markup %>
-      <% end %>">
 </form>

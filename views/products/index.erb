@@ -50,13 +50,21 @@
       <td>:</td>
       <td>£<%= product.sell_price %></td>
     </tr>
-    <div class="total">
-      <tr>
+    <tr>
+      <td>Total Stock Amount</td>
+      <td>:</td>
+      <td>£<%= product.total_stock_amount %></td>
+    </tr>
+    <tr>
+      <td>Potential Profit</td>
+      <td>:</td>
+      <td>£<%= product.potential_profit %></td>
+    </tr>
+    <tr>
         <td><strong>Markup</strong></td>
         <td>:</td>
         <td><strong>£<%= product.markup %></strong></td>
       </tr>
-    </div>
   <% end %>
   </tbody>
 </table>
@@ -75,14 +83,3 @@
   <input type="submit" value="Delete Product shows id">
 </form>
 <% end %>
-
-
-
-<form class="markup-return" action="/products/new" method="post">
-
-  <p>Calculate markup:</p>
-
-    <input type="submit"  value="<% for product in @products %>
-      <%= product.markup %>
-      <% end %>">
-</form>
