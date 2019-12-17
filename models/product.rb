@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require('pry')
 
 class Product
 
@@ -67,6 +68,14 @@ def self.find(id)
   return product
 end
 
+def self.find_product(designer_id)
+  sql = "SELECT * FROM products
+    WHERE designer_id = $1"
+  values = [@designer_id]
+  result = SqlRunner.run(sql, values)
+  return result.map { |item| Product.new(item)}
+end
+
 
 def update()
   sql = "UPDATE products
@@ -103,6 +112,8 @@ def total_stock_amount
   return @buy_price * @stock_quantity
 end
 
+
+
 # def add stock
 #
 
@@ -121,7 +132,10 @@ end
 
 #def buy_price to sell_price differnence e
 
-#
+
+
+#fix this !!!!!
+
 
 
 

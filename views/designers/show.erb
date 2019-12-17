@@ -1,15 +1,20 @@
 <h3><%= @designer.name%></h3>
-<p><%= @designer.location%></p>
+<p>Location: <%= @designer.location%></p>
 
 
-<a href="/designers/<%= @designer.id %>/edit">Edit</a>
+<!-- designers/id/products -->
+<a href="/designers/<%= @designer.id %>/edit">Edit Designer Info</a>
 
 <form action="/designers/<%= @designer.id %>/delete" method="POST">
   <br>
   <input type="submit" value="Delete">
 
+<!-- FIXXX THIIIISSSS -->
+<p>List of products</p>
+<% for product in @products %>
 
-<p>List of products</p></a>
+<p>Name: <%= product.name %></p>
+<% end %>
 <br>
 <br>
 <div>

@@ -12,12 +12,20 @@ get '/designers' do
   erb(:'designers/index')
 end
 
-get 'designers/new' do
+get '/designers/new' do
   erb(:'designers/new')
+end
+
+post '/designers' do
+  @designer = Designer.new(params)
+  @designer.save()
+  redirect to '/designers'
+
 end
 
 get '/designers/:id' do
   @designer = Designer.find(params[:id].to_i)
+  @products = Product.find_product(params['designer_id'].to_i)
   erb(:'designers/show')
 end
 
@@ -32,3 +40,12 @@ get '/designers/:id/edit' do
   @designer = Designer.find(params['id'])
   erb(:'designers/edit')
 end
+
+
+# get '/designers/:id/products' do
+#   @products = Product.find(params['designer_id'])
+#   erb(:'designers/show')
+# end
+
+
+# display a designer with all of their products

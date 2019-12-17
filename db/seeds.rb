@@ -72,7 +72,6 @@ product4 = Product.new({
   })
 product4.save()
 
-
-
 binding.pry
-nil
+
+products = Product.find_product(4)

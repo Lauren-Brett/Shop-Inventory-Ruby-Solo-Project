@@ -7,6 +7,14 @@ th {
   background-color: palegreen ;
 }
 
+/* screen sizing */
+@media (max-width: 600px) {
+  .column
+}
+
+/* container is the outside therefore becomes the display flex, directioon,
+wrap, align.
+put a class in and  */
 .product-table-one {
   display: flex;
 
