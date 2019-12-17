@@ -68,13 +68,7 @@ def self.find(id)
   return product
 end
 
-def self.find_product(designer_id)
-  sql = "SELECT * FROM products
-    WHERE designer_id = $1"
-  values = [@designer_id]
-  result = SqlRunner.run(sql, values)
-  return result.map { |item| Product.new(item)}
-end
+
 
 
 def update()

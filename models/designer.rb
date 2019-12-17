@@ -81,6 +81,13 @@ def self.destroy(id)
 end
 
 
+def destroy()
+  sql = "DELETE FROM designers
+    WHERE id =  $1;"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
+
 #
 # def number_of_products()
 #   sql = "SELECT products.* FROM products
@@ -96,7 +103,13 @@ end
 #   return products
 # end
 
-
+def find_product()
+  sql = "SELECT * FROM products
+    WHERE designer_id = $1"
+  values = [@designer_id]
+  result = SqlRunner.run(sql, values)
+  return result.map { |item| Product.new(item)}
+end
 
 
 end

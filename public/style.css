@@ -1,8 +1,29 @@
 body {
   background-color: #dbdbcc
-
 }
 
+.welcome h1 {
+  font-family: monospace;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav p {
+  font-style: italic;
+  font-size: 1em;
+}
+
+
+.image {
+
+  background-position: center;
+  height: 300px;
+}
 
 h3 {
   text-align: center;
@@ -13,6 +34,11 @@ h3 {
   text-align: center;
 }
 
+
+.product a {
+
+}
+
 .product-table table {
 
 }
@@ -20,5 +46,20 @@ h3 {
 
 
 .back-home {
-  background-color: ;
+  text-align: center;
+  border:3px dotted;
+
+  border-radius: 3%;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: monospace, serif;
+  margin: auto;
+  padding: 0;
+  width: 60px;
+
+}
+
+
+.container {
+  display: flex;
 }

@@ -22,6 +22,7 @@ end
 
 #new, create, get back
 get '/products/new' do
+  @products = Product.all
   erb(:'products/new')
 end
 
@@ -59,6 +60,7 @@ end
 
 #delete
 post '/products/:id/delete' do
-  Product.delete(params[:id])
+  product = Product.find(params[:id])
+  product.delete
   redirect to('/products')
 end

@@ -26,7 +26,7 @@ end
 #show
 get '/designers/:id' do
   @designer = Designer.find(params[:id].to_i)
-  @products = Product.find_product(params['designer_id'].to_i)
+  # @designer = Designer.find_product(params['designer_id'].to_i)
   erb(:'designers/show')
 end
 
@@ -45,17 +45,24 @@ get '/designers/:id/edit' do
 end
 
 
+
+
+#delete
+post '/designers/:id/delete' do
+
+  Designer.destroy(params[:id])
+  redirect to('/designers')
+end
+
+
+
 #update
 post '/designers/:id' do
   Designer.new(params).update
   redirect to('/designers')
 end
 
-#delete
-post '/designers/:id/delete' do
-  Designer.destroy(params[:id])
-  redirect to('/designers')
-end
+
 
 
 # get '/designers/:id/products' do
