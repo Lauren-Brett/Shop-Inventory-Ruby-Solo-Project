@@ -6,7 +6,6 @@ CREATE TABLE designers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   location VARCHAR(255)
-  -- markup_return INT
 );
 
 CREATE TABLE products (
