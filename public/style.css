@@ -46,21 +46,24 @@ h3 {
 
 
 .back-home {
+
   text-align: center;
   border:3px dotted;
 
-  border-radius: 3%;
+  /* border-radius: 3%; */
   /* padding: 8px 12px; */
   cursor: pointer;
   font-family: monospace, serif;
-  margin: auto;
-  padding: 0;
-  width: 60px;
+  /* margin: auto; */
+  /* padding: 0; */
 
 }
 
-.container-add-d {
+.centre-back {
+  color: green;
+}
 
+.container-add-d {
   text-align: center;
   display: flex;
   color: grey;
@@ -68,11 +71,17 @@ h3 {
   padding: auto;
   width: 200px;
 }
+
 .container {
   display: flex;
 }
 
-
+.heading-for-page {
+  font-family: monospace;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
 
 footer {
   text-align: center;

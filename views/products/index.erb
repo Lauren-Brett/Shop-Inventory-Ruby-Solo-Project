@@ -5,7 +5,9 @@
   <a href="/products/new">Create new product</a>
 </div>
 
-<h3>Current Products:</h3>
+<div class="heading-for-page">
+  <h3>Current Products</h3>
+</div>
 
 <div class="product-table-one">
 
@@ -68,6 +70,9 @@
 
 
 
+<table style="width: 100%;
+  display: flex;
+  justify-content: center;">>
 
 <% for product in @products %>
 <form action="/products/<%= product.id %>/delete" method="POST">
@@ -76,14 +81,29 @@
 </form>
 <% end %>
 
+</table>
+
+
+
+
+<form class="markup-return" action="/products/new" method="post">
+
+  <p>Calculate markup:</p>
+
+    <input type="submit"  value="<% for product in @products %>
+      <%= product.markup %>
+      <% end %>">
+</form>
 
 <br>
 <br>
-<div class="back-home">
-  <a href='/designers'>Designers</a>
-</div>
-<br>
-<br>
-<div class="back-home">
-  <a href='/'>Home</a>
+<div class="centre-back">
+    <a class="back-home" href='/designers'>Designers</a>
+
+  <br>
+  <br>
+
+  <div>
+    <a  class="back-home" href='/'>Home</a>
+  </div>
 </div>
