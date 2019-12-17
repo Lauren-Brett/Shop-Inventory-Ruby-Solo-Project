@@ -50,7 +50,7 @@ h3 {
   border:3px dotted;
 
   border-radius: 3%;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   cursor: pointer;
   font-family: monospace, serif;
   margin: auto;
@@ -59,7 +59,21 @@ h3 {
 
 }
 
+.container-add-d {
 
+  text-align: center;
+  display: flex;
+  color: grey;
+  border: 0.1em solid;
+  padding: auto;
+  width: 200px;
+}
 .container {
   display: flex;
+}
+
+
+
+footer {
+  text-align: center;
 }

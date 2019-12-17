@@ -17,15 +17,21 @@
   <label for="sell-cost">Sell Price:</label>
   <input type="text" name="sell_price" id="sell-cost">
 
-<p>Calculate markup:<%= </p>
-
+<p>Calculate markup:<% for product in @products %>
+  <%= product.markup %>
+</p>
+<% end %>
+<br>
   <input type="submit"  value="Add Product">
+
+
+
 
 </form>
 
 <br>
 <br>
-<div class="back-button">
+<div class="back-home">
   <a href='/products'>Products</a>
 </div>
 <br>
