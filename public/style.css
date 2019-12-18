@@ -2,28 +2,29 @@ body {
   background-color: #dbdbcc
 }
 
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
 .welcome h1 {
   font-family: monospace;
   text-align: center;
   color: white;
   display: block;
+  font-size: 50px;
 }
 
-.nav {
-  text-align: center;
-}
-
-.nav p {
-  color: grey;
-  font-size: 1em;
+.welcome body {
+  background-image: url("public/green-logo.jpg");
 }
 
 .image {
   display: inline-block;
-
   height: 200px;
   z-index: 0;
-
 }
 
 h1 {
@@ -42,29 +43,22 @@ h3 {
 
 
 .back-home {
-
   text-align: center;
   /* color: */
   display: block;
-  /* border-radius: 3%; */
-  /* padding: 8px 12px; */
   cursor: pointer;
   font-family: monospace, serif;
   margin: 20px 20px;
-  /* padding: 0; */
-  /* position: */
 }
 
 .back-home span {
   display: inline-block;
   border:2px dotted;
-  
+
 }
 
 .centre-back {
   text-align: center;
-
-  color: green;
 }
 
 .container-add-d {
@@ -74,7 +68,6 @@ h3 {
   border: 0.1em solid;
   padding: auto;
   width: 200px;
-
 }
 
 
@@ -98,6 +91,15 @@ h3 {
   font-size: 25px;
 }
 
-footer {
+
+
+
+
+.designer-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
   text-align: center;
+  color: red;
 }
