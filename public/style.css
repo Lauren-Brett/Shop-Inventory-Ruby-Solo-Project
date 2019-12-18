@@ -9,6 +9,8 @@ header {
   align-content: center;
 }
 
+
+
 .welcome h1 {
   font-family: monospace;
   text-align: center;
@@ -19,11 +21,6 @@ header {
 
 
 
-.image {
-  display: inline-block;
-  height: 200px;
-  z-index: 0;
-}
 
 h1 {
   text-align: center;
@@ -35,6 +32,10 @@ h3 {
   font-family: monospace;
 }
 
+.welcome {
+  background-image: url(green-logo.jpg)
+
+}
 .welcome p {
   text-align: center;
 }
@@ -98,10 +99,23 @@ h3 {
   flex-wrap: wrap;
   align-content: space-around;
   text-align: center;
-  color: red;
+  color: black;
+  border: 0.2em solid grey;
+  display: inline-block;
+   position: fixed; top: 30%; left: 42%;
+   padding:20px;
+
 }
+
 
 .designer-page ul {
   list-style-type: none;"
+  align-content: center;
   text-align: center;
+  padding: 0;
+}
+
+
+.designer-page h4 {
+  font-style: italic;
 }

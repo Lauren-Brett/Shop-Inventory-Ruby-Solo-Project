@@ -1,9 +1,9 @@
-<h1><style="font-family: monospace"><%= @designer.name%></h1>
+<h1><%= @designer.name%></h1>
 <div class="designer-page">
   <h5><strong>Location: <%= @designer.location%></strong></h5>
 
 
-<h2>Current Products</h2>
+<h4>Current Products:</h4>
 <ul>
   <% @products.each do |product|%>
   <li>
