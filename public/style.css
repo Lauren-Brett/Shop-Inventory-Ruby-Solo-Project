@@ -119,3 +119,8 @@ h3 {
 .designer-page h4 {
   font-style: italic;
 }
+
+
+tr:hover {
+  background-color: #E0CA3C;
+}
