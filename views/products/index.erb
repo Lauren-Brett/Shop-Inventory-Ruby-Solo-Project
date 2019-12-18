@@ -1,10 +1,6 @@
 <h1>Shop listings by PRODUCT</h1>
 <hr>
 
-<div class="create-product">
-  <a href="/products/new">Create new product</a>
-</div>
-
 <div class="heading-for-page">
   <h3>Current Products</h3>
 </div>
@@ -65,8 +61,17 @@
         <td>:</td>
         <td><strong>£<%= product.markup %></strong></td>
       </tr>
+      <tr>
+        <td>
+        <form action="/products/<%= product.id %>/delete" method="POST">
+          <br>
+          <input type="submit" value="Delete Product">
+        </form>
+        </td>
+      </tr>
   <% end %>
   </tbody>
+
 </table>
 </div>
 <br>
@@ -74,12 +79,6 @@
 <br>
 <br>
 <br>
-
-
-
-<% for product in @products %>
-<form action="/products/<%= product.id %>/delete" method="POST">
-  <br>
-  <input type="submit" value="Delete Product shows id">
-</form>
-<% end %>
+<div class="create-product">
+  <a href="/products/new">Create new product</a>
+</div>

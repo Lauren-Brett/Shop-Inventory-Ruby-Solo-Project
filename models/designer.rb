@@ -80,28 +80,12 @@ def self.destroy(id)
   SqlRunner.run(sql, values)
 end
 
-
 def destroy()
   sql = "DELETE FROM designers
     WHERE id =  $1;"
   values = [@id]
   SqlRunner.run(sql, values)
 end
-
-#
-# def number_of_products()
-#   sql = "SELECT products.* FROM products
-#         INNER JOIN designers_products
-#         ON designers.product_id = products.id
-#         WHERE products.designer_id = $1"
-#   values = [@id]
-#   products_result = SqlRunner.run(sql, values)
-#   return Product.map_items(products_result)
-# end
-# def list_products()
-#   products = Product.find(@designer_id)
-#   return products
-# end
 
 def find_product()
   sql = "SELECT * FROM products
