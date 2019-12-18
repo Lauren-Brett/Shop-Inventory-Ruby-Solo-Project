@@ -14,6 +14,7 @@ end
 
 #new, create, get back
 get '/designers/new' do
+  @products = Product.all()
   erb(:'designers/new')
 end
 
@@ -25,10 +26,8 @@ end
 
 #show
 get '/designers/:id' do
-
   @designer = Designer.find(params['id'].to_i)
   @products = @designer.find_product()
-
   erb(:'designers/show')
 end
 

@@ -1,13 +1,9 @@
-
-
-<h3><%= @designer.name%></h3>
+<h1><style="font-family: monospace"><%= @designer.name%></h1>
 <div class="designer-page">
-  <strong>Location:</strong>
-  <h5><italic><%= @designer.location%></italic></h5>
+  <h5><strong>Location: <%= @designer.location%></strong></h5>
 
 
-
-<p>Current Products</p>
+<h2>Current Products</h2>
 <ul>
   <% @products.each do |product|%>
   <li>
@@ -16,10 +12,9 @@
   <% end %>
 </ul>
 
-
-
 <a href="/designers/<%= @designer.id %>/edit">Edit Designer Info</a>
 <br>
+
 <form action="/designers/<%= @designer.id %>/delete" method="POST">
   <br>
   <input type="submit" value="Delete Designer">

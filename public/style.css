@@ -12,14 +12,12 @@ header {
 .welcome h1 {
   font-family: monospace;
   text-align: center;
-  color: white;
+  color: black;
   display: block;
   font-size: 50px;
 }
 
-.welcome body {
-  background-image: url("public/green-logo.jpg");
-}
+
 
 .image {
   display: inline-block;
@@ -82,16 +80,15 @@ h3 {
 
 .container {
   display: flex;
+
 }
 
 .heading-for-page {
   font-family: monospace;
   text-align: center;
-  color: white;
+  color: #223127;
   font-size: 25px;
 }
-
-
 
 
 
@@ -102,4 +99,9 @@ h3 {
   align-content: space-around;
   text-align: center;
   color: red;
+}
+
+.designer-page ul {
+  list-style-type: none;"
+  text-align: center;
 }

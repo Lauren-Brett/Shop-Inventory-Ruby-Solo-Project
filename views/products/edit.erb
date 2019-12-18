@@ -1,0 +1,22 @@
+<form method="post" action="/products/<%= @product.id %>">
+
+
+  <label for="name">Company Name:</label>
+  <input type="text" name="name" id="name" value="<%= @product.name %>"/>
+
+  <label for="stock_quantity">stock_quantity:</label>
+  <input type="text" name="stock_quantity" value="<%= @product.stock_quantity%>"/>
+
+  <label for="buy_price">buy_price:</label>
+  <input type="text" name="buy_price" value="<%= @product.buy_price%>"/>
+
+  <label for="sell_price">sell_price:</label>
+  <input type="text" name="sell_price" value="<%= @product.sell_price%>"/>
+
+
+  <label for="markup">markup:</label>
+  <input type="text" name="markup" value="<%= @product.markup%>"/>
+
+
+  <input type="submit" value="Edit Product"/>
+</form>

@@ -25,6 +25,9 @@ post '/products' do
   redirect to '/products'
 end
 
+
+
+
 #show
 get '/products/:id' do
   @product = Product.find(params[:id].to_i)
@@ -34,7 +37,7 @@ end
 
 #edit
 get '/products/:id/edit' do
-  @products = Product.find(params['id'])
+  @product = Product.find(params['id'])
   erb(:'products/edit')
 end
 
