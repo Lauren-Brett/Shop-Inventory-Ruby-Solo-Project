@@ -1,7 +1,7 @@
 
 
 <div class="heading-for-page">
-  <h1>Listings for current Products</h1>
+  <h3>Listings for current Products</h3>
   <hr>
 </div>
 
@@ -16,59 +16,71 @@
   <tbody>
 
   <tr>
-    <th>Products</th>
+    <th>Product</th>
     <th></th>
   </tr>
+
   <br>
+
   <tr>
     <td>Company</td>
     <td>:</td>
     <td><%= product.designer.name%></td>
   </tr>
-
+  <tr>
+    <td>Product type</td>
+    <td>:</td>
+    <td><%= product.name %></td>
+  </tr>
     <tr>
       <td>Description</td>
       <td>:</td>
       <td><%= product.description %></td>
     </tr>
     <tr>
-      <td>Current Stock</td>
-      <td>:</td>
-      <td><%= product.stock_quantity %></td>
-    </tr>
-    <tr>
-      <td>Cost</td>
+      <td>Cost per item</td>
       <td>:</td>
       <td>£<%= product.buy_price %></td>
     </tr>
     <tr>
-      <td>Sell Price</td>
+      <td>Retail per item</td>
       <td>:</td>
       <td>£<%= product.sell_price %></td>
     </tr>
     <tr>
-      <td>Total Stock Amount</td>
-      <td>:</td>
-      <td>£<%= product.total_stock_amount %></td>
-    </tr>
-    <tr>
-      <td>Potential Profit</td>
-      <td>:</td>
-      <td>£<%= product.potential_profit %></td>
-    </tr>
-    <tr>
-        <td><strong>Markup</strong></td>
+        <td>Markup per item</td>
         <td>:</td>
-        <td><strong>£<%= product.markup %></strong></td>
+        <td>£<%= product.markup %></td>
       </tr>
+
       <tr>
+        <td>Current Stock</td>
+        <td>:</td>
+        <td><%= product.stock_quantity %></td>
+      </tr>
+
+      <tr>
+    <tr>
+      <td><strong>Total Stock Value</strong></td>
+      <td>:</td>
+      <td><strong>£<%= product.total_stock_amount %></strong></td>
+    </tr>
+    <div class="table-row-color">
+    <tr>
+      <td><strong>Potential Profit</strong></td>
+      <td>:</td>
+      <td><strong>£<%= product.potential_profit %></strong></td>
+    </tr>
+    
+    </div>
+
         <td>
         <form action="/products/<%= product.id %>/delete" method="POST">
           <br>
           <input type="submit" value="Delete Product">
         </form>
         </td>
-      </tr>
+
   <% end %>
   </tbody>
 
@@ -81,5 +93,7 @@
 <br>
 <div class="create-product">
   <a href="/products/new">Create new product</a>
-  <a href="/products/edit">Edit Product</a>
+  <br>
+  <!-- <a href="/products/edit">Edit Product</a> -->
+
 </div>

@@ -7,7 +7,7 @@
 <ul>
   <% @products.each do |product|%>
   <li>
-    <%= product.name %>
+    <%= product.stock_quantity%> x <%= product.name %>
   </li>
   <% end %>
 </ul>

@@ -1,7 +1,16 @@
-<p>Add new prdouct</p>
+<h3><strong>Add new prdouct</strong></h3>
+<hr>
 
 <form method="post" action="/products">
 
+  <p>Select Designer:
+  <select name="designer_id">
+    <% for designer in @designers %>
+    <option value="<%= designer.id %>"><%= designer.name %>
+    </option>
+    <% end %>
+  </select></p>
+  <br>
 
   <label for="type-name">Product Name:</label>
   <input type="text" name="name" id="type-name">
@@ -18,13 +27,7 @@
   <label for="sell-cost">Sell Price:</label>
   <input type="text" name="sell_price" id="sell-cost">
 
-<p>Select Designer:</p>
-<select name="designer_id">
-  <% for designer in @designers %>
-  <option value="<%= designer.id %>"><%= designer.name %>
-  </option>
-  <% end %>
-</select>
+
 <br>
 <br>
   <input type="submit"  value="Add Product">

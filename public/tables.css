@@ -1,10 +1,11 @@
 table {
   background-color: white;
+  font-family: monospace;
 
 }
 
 th {
-  background-color: palegreen ;
+  background-color: #DD6031 ;
 }
 
 /* screen sizing */

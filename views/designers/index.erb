@@ -1,13 +1,20 @@
 
 
 <div class="heading-for-page">
-  <h1>Listings of current Designers</h1>
+  <h3>Listings of current Designers</h3>
   <hr>
 </div>
 
 <div class="container">
 
 <table>
+  <style="width: 100%;
+  display: flex;
+  justify-content: center;">
+
+  <tbody>
+
+
 <tr>
   <th>Company Name</th>
   <th></th>
@@ -20,16 +27,13 @@
     <td><%= designer.location %></td>
   </tr>
 <% end %>
+
+</tbody>
 </table>
 
 </div>
 
-
-
-
-
-
 <hr>
-<div class="create">
+<div class="create-product">
   <a href="/designers/new">Create new designer</a>
 </div>

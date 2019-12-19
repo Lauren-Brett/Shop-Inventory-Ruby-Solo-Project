@@ -27,7 +27,6 @@ end
 
 
 
-
 #show
 get '/products/:id' do
   @product = Product.find(params[:id].to_i)

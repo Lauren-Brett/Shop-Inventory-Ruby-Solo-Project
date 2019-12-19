@@ -47,7 +47,7 @@ product2 = Product.new({
     'stock_quantity' => 2,
     'buy_price' => 10,
     'sell_price' => 20,
-    'designer_id' => designer2.id
+    'designer_id' => designer1.id
     })
 product2.save()
 
@@ -57,7 +57,7 @@ product3 = Product.new({
       'stock_quantity' => 4,
       'buy_price' => 50,
       'sell_price' => 80,
-      'designer_id' => designer3.id
+      'designer_id' => designer2.id
   })
 product3.save()
 
@@ -68,7 +68,7 @@ product4 = Product.new({
         'stock_quantity' => 2,
         'buy_price' => 60,
         'sell_price' => 100,
-        'designer_id' => designer1.id
+        'designer_id' => designer3.id
   })
 product4.save()
 
