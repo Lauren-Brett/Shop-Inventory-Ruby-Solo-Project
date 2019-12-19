@@ -1,9 +1,11 @@
 <h1><%= @designer.name%></h1>
+
 <div class="designer-page">
   <h5><strong>Location: <%= @designer.location%></strong></h5>
 
 
 <h4>Current Products:</h4>
+<div class="product-listings">
 <ul>
   <% @products.each do |product|%>
   <li>
@@ -11,8 +13,11 @@
   </li>
   <% end %>
 </ul>
+</div>
 
+<div class="create-product ">
 <a href="/designers/<%= @designer.id %>/edit">Edit Designer Info</a>
+</div>
 <br>
 
 <form action="/designers/<%= @designer.id %>/delete" method="POST">

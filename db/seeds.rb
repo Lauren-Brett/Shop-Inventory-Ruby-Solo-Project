@@ -72,6 +72,16 @@ product4 = Product.new({
   })
 product4.save()
 
+product5 = Product.new({
+        'name' => 'Gloves',
+        'description' => 'Merino',
+        'stock_quantity' => 4,
+        'buy_price' => 20,
+        'sell_price' => 30,
+        'designer_id' => designer2.id
+  })
+product5.save()
+
 binding.pry
 
 products = Product.find_product(4)
